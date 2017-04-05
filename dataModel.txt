@@ -1,0 +1,42 @@
+* Web Flow Of Zomato
+
+1. Sign up / Log in
+2. Have a display page ( includes options of adding a restaurant / search for restaurants)
+3. If one is searching for resaurants ( Customer ):
+    - Search by name & city
+    - Diaplay all the restaurants in the city with that name( with link to their respective dashboards )
+    - The dashboard contains overview, review, photos, and an option to add to cart( of that particular user )
+4. If one is adding a restaurant ( Adder ):
+    - Collect details regarding the restaurant
+    - Add it to the database
+5. Display message accordingly as the restaurant is added or food is added to cart.
+
+
+* Phases Of Zomato
+
+** Restaurant model:
+# The adder has to enter the ID, name, city, contact details, photos, category and cuisine of the restaurant he wants to add.
+table_name - "Restaurant Table"
+
+    - ID - primary_key, unique
+    - Name
+    - City
+    - Contact Details
+    - Photos
+    - Category( Array )
+    - Cuisine ( Array of JSon object )
+
+** Customer Model
+# The customer has to enter the Email-Id, name, and password.
+table_name - "Customer Table"
+
+    - ID - primary_key, unique
+    - Name
+    - Password
+
+** Mapping Model
+# Mapping from Customer to  Restaurant.
+table_name - "Mapping"
+
+    - Rating
+    - Photos
